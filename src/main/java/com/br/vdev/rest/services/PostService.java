@@ -22,7 +22,12 @@ public class PostService {
 	}
 	
 	public List<Post> findByTitle(String text){
+		
+		// CONSULTA SIMPLES COM QUERY METHODS
 		return repo.findByTitleContainingIgnoreCase(text);
+		
+		// CONSULTA SIMPLES COM @QUERY
+		//return repo.findByTitle(text);
 	}
 
 }
